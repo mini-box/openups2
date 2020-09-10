@@ -40,7 +40,7 @@ sudo chown root.nut /usr/local/ups/etc/upsd.users
 ```
 
 # Step 3
-Edit /etc/ups.conf (or /usr/local/ups/etc/ups.conf from sources) and add the following lines at the bottom:
+Edit /etc/nut/ups.conf (or /usr/local/ups/etc/ups.conf from sources) and add the following lines at the bottom:
 ```
 [openups2]
     driver = usbhid-ups
@@ -98,7 +98,7 @@ b)
 $ sudo chmod 0666 /dev/bus/usb/[bus number]/[device number]
 ```
 
-NOTE: these permissions will need to be reset everytime you restart the computer or unplug the device
+*NOTE: these permissions will need to be reset everytime you restart the computer or unplug the device*
 
 OPTIONAL: a UDEV rule can be added to avoid this
 ```bash
@@ -130,6 +130,8 @@ If installed from sources:
 ```
 sudo /usr/local/ups/sbin/upsd -u ups
 ```
+*NOTE: Recent versions of ubuntu might require editing /etc/nut/nut.conf and 
+set ``` MODE=standalone```*
 
 # Step 8
 You can now view the live UPS data using your preffered UPSD Client

@@ -7,7 +7,7 @@
 Plug the device in, check the device connection
 
 ```bash
-$ lsusb | grep "d005"
+$ sudo lsusb | grep "d005"
 Bus 001 Device 002: ID 04d8:d005 Microchip Technology, Inc.
 ```
 
